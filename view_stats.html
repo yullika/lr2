@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Статистика сообщений</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID пользователя</th>
+            <th>Количество сообщений</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stat in stats %}
+        <tr>
+            <td>{{ stat.user_id }}</td>
+            <td>{{ stat.message_count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
